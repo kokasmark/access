@@ -4,7 +4,7 @@ def display(self,term):
     selected_index = 0
     with term.fullscreen(), term.cbreak(), term.hidden_cursor():
         while True:
-            print(term.move(0, 0) + self.render_tag(f"Tag - Files simply and fast",Color.CBLUE2))
+            print(term.move(0, 0) + self.render_tag(f"Access - Files simply and fast",Color.CBLUE2))
             print(self.render_tag(f"{Color.CGREEN2}{Symbols.UP_ARROW}{Symbols.DOWN_ARROW}{Color.CEND} Scroll | {Color.CRED2}{Symbols.ESC}{Color.CEND} Exit/Cancel | {Color.CBLUE2}{Symbols.ENTER}{Color.CEND} Select/Save",Color.CWHITE2,hasSymbol=True,offset=-1))
 
 
