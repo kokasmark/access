@@ -41,8 +41,10 @@ def display_tag_content(self, term,tag):
                             run_action = [self.action_open_folder, self.action_run, self.action_code, self.action_remove]
                             if combined_items[item_index] in tag["folders"]:
                                 actions.remove(run)
+                                run_action.remove(self.action_run)
                             else:
                                 actions.remove(open)
+                                run_action.remove(self.action_open_folder)
 
                             if not opened_menu:
                                 print(term.move(y_position, 0) + Color.CBLINK2+t)

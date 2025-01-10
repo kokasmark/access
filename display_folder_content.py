@@ -57,12 +57,12 @@ def display_folder_content(self,term, tag):
                 item = {"name": selected_item, "path": os.path.join(os.getcwd(),selected_item)}
 
                 if is_folder:
-                    if selected_item in tag["folders"]:
+                    if item in tag["folders"]:
                         tag["folders"].remove(item)
                     else:
                         tag["folders"].append(item)
                 else:
-                    if selected_item in tag["files"]:
+                    if item in tag["files"]:
                         tag["files"].remove(item)
                     else:
                         tag["files"].append(item)
